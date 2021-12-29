@@ -1,8 +1,8 @@
-defmodule NervesSystemRpi4.MixProject do
+defmodule FarmbotSystemRpi4.MixProject do
   use Mix.Project
 
-  @github_organization "nerves-project"
-  @app :nerves_system_rpi4
+  @github_organization "farmbot"
+  @app :farmbot_system_rpi4
   @source_url "https://github.com/#{@github_organization}/#{@app}"
   @version Path.join(__DIR__, "VERSION")
            |> File.read!()
@@ -65,7 +65,7 @@ defmodule NervesSystemRpi4.MixProject do
   defp deps do
     [
       {:nerves, "~> 1.5.4 or ~> 1.6.0 or ~> 1.7.3", runtime: false},
-      {:nerves_system_br, "1.18.0", runtime: false},
+      {:nerves_system_br, "1.17.4", runtime: false},
       {:nerves_toolchain_aarch64_nerves_linux_gnu, "~> 1.4.3", runtime: false},
       {:nerves_system_linter, "~> 0.4", only: [:dev, :test], runtime: false},
       {:ex_doc, "~> 0.22", only: :docs, runtime: false}
@@ -91,7 +91,7 @@ defmodule NervesSystemRpi4.MixProject do
   defp package do
     [
       files: package_files(),
-      licenses: ["Apache-2.0"],
+      licenses: ["Apache 2.0"],
       links: %{"GitHub" => @source_url}
     ]
   end
