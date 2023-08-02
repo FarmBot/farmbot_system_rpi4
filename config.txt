@@ -13,8 +13,8 @@
 arm_64bit=1
 
 # We always use the same names. The variant is selected in fwup.conf.
-start_file=start.elf
-fixup_file=fixup.dat
+start_file=start4.elf
+fixup_file=fixup4.dat
 
 # Disable the boot rainbow
 disable_splash=1
@@ -24,9 +24,11 @@ disable_splash=1
 # configuration. See Target packages->Hardware handling->Firmware.
 gpu_mem=192
 
-# Enable I2C, SPI, and audio
+# Enable I2C and SPI
 dtparam=i2c_arm=on
 dtparam=spi=on
+
+# Enable audio (loads snd_bcm3825)
 dtparam=audio=on
 
 # Automatically load overlays for detected cameras
